@@ -1,13 +1,11 @@
-require("dotenv").config();
-
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 4210;
 
 app.use(express.json());
 
-const mongoURI = process.env.MONGODB_URI;
+const mongoURI = 'mongodb+srv://arnavraheja10:8T3QxN7jveTgHVbW@exunbackendcluster.8a205w6.mongodb.net/?retryWrites=true&w=majority&appName=ExunBackendCluster';
 
 mongoose
   .connect(mongoURI)
