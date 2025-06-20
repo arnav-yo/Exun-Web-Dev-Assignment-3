@@ -5,7 +5,8 @@ const port = 4210;
 
 app.use(express.json());
 
-const mongoURI = 'mongodb+srv://arnavraheja10:8T3QxN7jveTgHVbW@exunbackendcluster.8a205w6.mongodb.net/?retryWrites=true&w=majority&appName=ExunBackendCluster';
+const mongoURI =
+  "mongodb+srv://arnavraheja10:8T3QxN7jveTgHVbW@exunbackendcluster.8a205w6.mongodb.net/?retryWrites=true&w=majority&appName=ExunBackendCluster";
 
 mongoose
   .connect(mongoURI)
@@ -59,11 +60,9 @@ app.get("/notes", async (request, res) => {
     const allNotes = await Note.find();
     res.status(200).json(allNotes);
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: `Its an error on our end. The error is ${err.message}`,
-      });
+    res.status(500).json({
+      message: `Its an error on our end. The error is ${err.message}`,
+    });
   }
 });
 
